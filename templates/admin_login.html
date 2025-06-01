@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Connexion Admin</title>
+    <style>
+        body {
+            background: #f0f2f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            width: 320px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 10px 12px;
+            margin: 12px 0 20px 0;
+            border: 1.5px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        input[type="password"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        small {
+            display: block;
+            margin-top: 12px;
+            color: #666;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Connexion Admin</h1>
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        <form method="post" autocomplete="off">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <input type="password" name="password" placeholder="Mot de passe admin" required autofocus />
+            <button type="submit">Se connecter</button>
+        </form>
+        <small>Entrez votre mot de passe pour accéder au panneau administrateur.</small>
+    </div>
+</body>
+</html>
