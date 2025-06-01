@@ -1,1 +1,6 @@
-flask
+Flask
+flask-wtf
+bcrypt
+cryptography
+pyotp
+qrcode

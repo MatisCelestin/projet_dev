@@ -115,9 +115,9 @@ git clone https://github.com/MatisCelestin/projet_dev.git
 ```
 
 ### 2. Installer les dépendances
-
+```
 pip install -r requirements.txt
-
+```
 Contenu de requirements.txt :
 ```
 Flask
