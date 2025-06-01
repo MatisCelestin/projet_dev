@@ -70,7 +70,7 @@ Un gestionnaire de mots de passe sécurisé développé en **Python avec Flask**
 ---
 
 ## 🧠 Structure du projet
-
+```
 ├── app.py # Fichier principal Flask
 ├── forms.py # Définitions des formulaires (Login, Register, 2FA)
 ├── data.db # Base de données SQLite
@@ -86,7 +86,7 @@ Un gestionnaire de mots de passe sécurisé développé en **Python avec Flask**
 ├── static/ # Fichiers CSS/JS
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
@@ -111,8 +111,7 @@ La base SQLite `data.db` contient deux tables :
 ### 1. Cloner le projet
 
 ```bash
-git clone <repo>
-cd <repo>
+git clone https://github.com/MatisCelestin/projet_dev.git
 ```
 
 ### 2. Installer les dépendances
